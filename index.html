@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FontAwesome 图标 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- AOS  动画-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- 这个差价有点兼容性不好，出现时会增加浏览器宽度 -->
+    <!-- 引入css文件 -->
+    <link rel="stylesheet" href="./css.css">
+    <title>3条状布局练习</title>
+</head>
+
+<body>
+    <!-- header -->
+
+    <div class="header">
+        <div class="top">
+            <div class="top-img">0000</div>
+            <!-- <div class="theme">
+                <input type="checkbox" id="checkbox" class="checkbox">
+                <label class="label" for="checkbox">
+                    <div class="ball"></div>
+                </label>
+            </div> -->
+            <div class="mytheme">
+                <input type="checkbox" id="mycheckbox" class="mycheckbox  ">
+                <label class='mylabel' for="mycheckbox"> <!---这里for对应的是class的名字-->
+                    <div class="myball"></div>
+                </label>
+            </div>
+            <div class="music">
+                <img src="./img/audio.png" alt="" id="musicbtn">
+                <audio src="./曲扬,Shymie,幻塔手游 - Meant to be.mp3" id="music"></audio>
+
+            </div>
+            <ul class="top-ul">
+                <li><a href="../1滑动登入界面/html/position.html">position</a></li>
+                <li><a href="../6评论/index.html">评论</a></li>
+                <li><a href="../7商城/index.html">商城</a></li>
+                <li><a href="../8数据/index.html">数据</a></li>
+                <li><a href="../1滑动登入界面/html/Login.html">登入</a></li>
+
+
+                <li><a class="top-ctn" href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="nation">
+            <div class="nation-nat">
+                <h1>abcd</h1>
+
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, vitae id placeat cumque sunt aut
+                    quisquam sed ad nesciunt, recusandae similique facilis? Culpa recusandae quae, quo facere voluptatum
+                    doloremque aspernatur?</p>
+                <a href="#" class="nation-linkA">Learn More</a>
+                <a href="#" class="nation-linkB">Contact us</a>
+            </div>
+            <div class="nation-img">
+                <img src="./img/1.png" alt="">
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="header-content">
+                <h1>We are startuo creative agency</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus sapiente, natus nam voluptates tenetur illo nihil eos, accusamus fugiat ducimus tempore illum recusandae assumenda facilis itaque voluptate vel, quasi deleniti.</p>
+                <a href="#" class="learnmore">Learn More</a>
+                <a href="#" class="ctn">Contact us</a>
+            </div>
+            <div class="hero-img">
+                <img src="./images/hero-img.svg" alt="">
+            </div>
+        </div> -->
+    </div>
+    <!-- Ablock -->
+    <section class="ablock" data-aos="fade-right">
+        <div class="ablock-nation">
+            <div class="wrapper">
+                <div class="abox abox1">
+                    <img src="./img/abox1.jpg" alt="">
+                    <h1>Lorem, ipsum.</h1>
+                </div>
+                <div class="abox abox2">
+                    <img src="./img/abox2.jpg" alt="">
+                    <h1>Lorem, ipsum.</h1>
+                </div>
+                <div class="abox abox3">
+                    <img src="./img/abox3.jpg" alt="">
+                    <h1>Lorem, ipsum.</h1>
+                </div>
+                <div class="abox abox4">
+                    <img src="./img/abox4.jpg" alt="">
+                    <h1>Lorem, ipsum.</h1>
+                </div>
+            </div>
+            <div class="ablock-content">
+                <div class="ablock-content-box">
+                    <h1>内容</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius consequuntur voluptatibus,
+                        assumenda sed blanditiis nobis est eum voluptas fuga animi cum aspernatur architecto aut
+                        nesciunt nulla dolorum qui totam voluptatem.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ea deserunt, quae totam nesciunt
+                        non reprehenderit obcaecati porro magni possimus? Sapiente praesentium unde dolorem dolore animi
+                        voluptatum harum deleniti adipisci.</p>
+                    <a href="#" class="nation-linkA">Learn More</a>
+                </div>
+                <div class="ablock-img">
+                    <img src="./img/ablock-content.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>>
+
+    <!-- bblock -->
+    <div class="bblock" data-aos="fade-left">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad repellat quibusdam magnam quisquam aliquam,
+            cumque neque id, magni velit nemo rem sed itaque natus, aperiam corrupti aspernatur eos impedit soluta.</p>
+        <div class="bblock-content">
+            <div class="wrapper">
+                <div class="abox">
+                    <img src="./img/bbox1.jpg" alt="">
+                </div>
+                <div class="abox">
+                    <img src="./img/bbox2.jpg" alt="">
+                </div>
+                <div class="abox">
+                    <img src="./img/bbox3.jpg" alt="">
+                </div>
+                <div class="abox">
+                    <img src="./img/bbox4.jpg" alt="">
+                </div>
+            </div>
+            <div class="bblock-img">
+                <img src="./img/bbox-img.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- cblock -->
+    <div class="cblock" data-aos="zoom-in">
+        <h1>Lorem ipsum dolor sit </h1>
+        <div class="cblock-imgs">
+            <div class="cblock-img">
+                <div class="cbox">
+                    <img src="./img/cbox1.jpg" alt="">
+                    <div class="details">
+                        <h2>Creative</h2>
+                        <h1>Web Development</h1>
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="cblock-img">
+                <div class="cbox">
+                    <img src="./img/cbox2.jpg" alt="">
+                    <div class="details">
+                        <h2>Creative</h2>
+                        <h1>Web Development</h1>
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="cblock-img">
+                <div class="cbox">
+                    <img src="./img/cbox3.jpg" alt="">
+                    <div class="details">
+                        <h2>Creative</h2>
+                        <h1>Web Development</h1>
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="cblock-img">
+                <div class="cbox">
+                    <img src="./img/cbox4.jpg" alt="">
+                    <div class="details">
+                        <h2>Creative</h2>
+                        <h1>Web Development</h1>
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="cblock-img">
+                <div class="cbox">
+                    <img src="./img/cbox5.jpg" alt="">
+                    <div class="details">
+                        <h2>Creative</h2>
+                        <h1>Web Development</h1>
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="cblock-img">
+                <div class="cbox">
+                    <img src="./img/cbox6.jpg" alt="">
+                    <div class="details">
+                        <h2>Creative</h2>
+                        <h1>Web Development</h1>
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- dblock -->
+    <div class="dblock" data-aos="zoom-in">
+        <h1 class="dblock-h1">嘿嘿嘿</h1>
+        <div class="dblock-img">
+            <div class="dbox">
+                <img src="./img/dbox1.png" alt="">
+                <h1>1111</h1>
+                <h2>2222</h2>
+                <div class="dboxtb">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="dbox">
+                <img src="./img/dbox2.png" alt="">
+                <h1>1111</h1>
+                <h2>2222</h2>
+                <div class="dboxtb">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="dbox">
+                <img src="./img/dbox3.png" alt="">
+                <h1>1111</h1>
+                <h2>2222</h2>
+                <div class="dboxtb">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="dbox">
+                <img src="./img/dbox4.png" alt="">
+                <h1>1111</h1>
+                <h2>2222</h2>
+                <div class="dboxtb">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- eblock -->
+    <div class="eblock" data-aos="fade-left">
+        <h1 class="eblock-h1">老婆的话</h1>
+        <p class="eblock-p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsam, facere modi
+            nostrum dignissimos perferendis labore quo unde harum fugit asperiores ex cum exercitationem delectus
+            recusandae id ea odio. Repellendus.</p>
+        <div class="eblock-img">
+            <div class="ebox">
+                <i class="fa fa-quote-right"></i>
+                <div class="ebox-ih">
+                    <img src="./img/dbox1.png" alt="">
+                    <h2>1111</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, Sed maxime ea, iure illum esse sint incidunt? Dignissimos
+                    reiciendis provident quos ut deserunt quam corrupti?</p>
+            </div>
+            <div class="ebox">
+                <i class="fa fa-quote-right"></i>
+                <div class="ebox-ih">
+                    <img src="./img/dbox2.png" alt="">
+                    <h2>1111</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi temporibus sit quos nobis
+                    voluptates. Sed maxime ea, iure illum esse sint incidunt? Dignissimos reiciendis provident quos ut
+                    deserunt quam corrupti?</p>
+            </div>
+            <div class="ebox">
+                <i class="fa fa-quote-right"></i>
+                <div class="ebox-ih">
+                    <img src="./img/dbox3.png" alt="">
+                    <h2>1111</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi temporibus sit quos nobis
+                    voluptates. Sed maxime ea, iure illum esse sint incidunt? Dignissimos reiciendis provident quos ut
+                    deserunt quam corrupti?</p>
+            </div>
+        </div>
+    </div>
+    <!-- fblock -->
+    <div class="fblock" data-aos="fade-right">
+        <h1 class="fblock-h1">Lorem ipsum dolor sit amet consectetur</h1>
+        <div class="wrapper">
+            <div class="fbox">
+                <img src="./img/fbox1.png" alt="">
+                <h1>xxxxxxx</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat animi commodi culpa nulla tempora
+                    deserunt mollitia error ad maiores officiis impedit dolorum necessitatibus voluptas provident
+                    consequuntur, dolores aut. Obcaecati, saepe.</p>
+            </div>
+            <div class="fbox">
+                <img src="./img/fbox2.png" alt="">
+                <h1>xxxxxxx</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat animi commodi culpa nulla tempora
+                    deserunt mollitia error ad maiores officiis impedit dolorum necessitatibus voluptas provident
+                    consequuntur, dolores aut. Obcaecati, saepe.</p>
+            </div>
+            <div class="fbox">
+                <img src="./img/fbox3.png" alt="">
+                <h1>xxxxxxx</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat animi commodi culpa nulla tempora
+                    deserunt mollitia error ad maiores officiis impedit dolorum necessitatibus voluptas provident
+                    consequuntur, dolores aut. Obcaecati, saepe.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- gblock -->
+    <div class="gblock">
+        <div class="gbox">
+            <div class="gblock-concent">
+                <h1>xxxxxxxxxxxxxx</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="ctn">
+                <button>gogo</button>
+            </div>
+        </div>
+    </div>
+    <!-- hblock -->
+    <div class="hblock">
+        <div class="wrapper">
+            <div class="hbox">
+                <h1>Teach Bees</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident libero doloremque repellendus
+                    rerum
+                    quis. Fugit dignissimos veniam explicabo sed voluptatem.</p>
+                <div class="hboxtb">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="hbox">
+                <h1>Contack info</h1>
+                <p>Tech Bees , New jersery</p>
+                <p>New york , USA</p>
+                <p>0000-000-0000</p>
+                <p>techbees@gmail.com</p>
+                <p>website.com</p>
+            </div>
+            <div class="hbox">
+                <h1>About Us</h1>
+                <p>company</p>
+                <p>Projects</p>
+                <p>Events</p>
+                <p>Awards</p>
+                <p>Open Source</p>
+            </div>
+            <div class="hbox">
+                <h1>Solutions</h1>
+                <p>Customer software</p>
+                <p>Web Design</p>
+                <p>Projects</p>
+                <p>App Development</p>
+                <p>Awards</p>
+                <p>Awards</p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="hblock-b">
+            <h4>Copyright Fuck</h4>
+            <h4>Terms & Use</h4>
+            <h4>Privacy Policy</h4>
+        </div>
+    </div>
+    <!-- 回到顶部 -->
+    <div class="gotop">
+        <img src="./img/gotop.png" alt="">
+    </div>
+    <!-- 引入js文件 -->
+    <script src="./app.js"></script>
+
+
+    <!-- 引入AOS的预设格式 -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            delay: 100,
+            duration: 1000,
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,644 @@
+/* 国际标准形式 */
+*{
+    margin: 0%;  /*0和0%不是一个东西*/
+    border: 0%;
+    box-sizing: border-box;
+}
+/* Gradient Colors 预设体 */
+:root{
+    --gradient-1 :linear-gradient(to bottom right, rgb(107, 107, 255), blue);
+
+    --gradient-2 : linear-gradient(to bottom right, rgb(80, 80, 255), rgb(253, 119, 119));
+
+    --gradient-3 :  linear-gradient(to bottom right, rgb(255, 207, 145),rgb(255, 111, 92));
+
+    --gradient-4 : linear-gradient(to bottom right, #2af598, #009efd);
+}
+/* 对整体布局 */
+/* a标签布局 */
+body a{
+    text-decoration: none;/*清楚下划线*/
+    color: whitesmoke;/*设置字体*/
+}
+
+
+
+body{
+    border: solid 1px black;
+    background-image: url("./img/2.jpg");
+}
+/* header部分 */
+/* top部分 */
+.top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    padding: 10px 50px;
+    align-items: center;
+    background: var(--gradient-3);
+}
+.top-img{
+    width: 200px;
+    height: 50px;
+    background: yellow;
+}
+.top ul{
+    flex: 1;
+    text-align: right;
+  
+}
+.top li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 25px;
+}
+.top-ctn{
+    padding: 10px 20px;
+    border: solid 2px green;
+    border-radius: 50px;
+    background: var(--gradient-4);
+
+}
+/* nation部分 */
+.nation{
+    display: flex;/*弹性盒子，使之模块布局在同一水平时挤满，不满在往下挤*/
+    align-items: center;
+    padding-top: 5rem;
+    padding-left: 100px;
+}
+
+.nation-nat .nation-img{
+    flex-basis: 50%;/*弹性盒子基数50%，使之模块更接近正方形*/
+    padding: 100px;
+}
+.nation-img img{
+    width: 400px;
+    height: 400px;
+    margin-left: 100px;/*在弹性盒子中，外边框能把别人挤走，内边框内把自己撑大*/
+}
+
+.nation-nat h1{
+    font-size: 64px;
+    color: #4542ff;
+    padding-bottom: 30px;
+}
+.nation-nat p{
+    padding-bottom: 30px;
+}
+.nation-linkA{
+    padding: 10px 20px;
+    border: solid 2px orange;
+    border-radius: 50px;
+    color: orangered;
+  
+}
+.nation-linkB{
+    padding: 10px 20px;
+    border: solid 2px whitesmoke;
+    border-radius: 50px;
+    background: var(--gradient-1);
+    margin-left: 30px;
+    color: orange;
+}
+
+/* 模板 */
+/* .row{
+    display: flex;
+    align-items: center;
+    padding-top: 5rem;
+}
+.header-content , .hero-img{
+    flex-basis: 50%;
+    padding: 5rem;
+}
+
+.header-content h1{
+    font-size: 7vmin;
+    margin-bottom: 30px;
+    margin-top: 7rem;
+    color: #4542ff;
+}
+
+.header-content p{
+    margin-bottom: 30px;
+}
+
+.learnmore{
+    padding: 10px 20px;
+    border: 1px solid tomato;
+    border-radius: 50px;
+    color: tomato;
+    margin-right: 30px;
+}
+
+.learnmore:hover{
+    background: var(--gradient-3);
+    border: none;
+    color: whitesmoke;
+}
+.ctn{
+    padding: 10px 20px;
+    background: var(--gradient-3);
+    border-radius: 50px;
+}
+
+.hero-img img{
+    margin-left: 200px;
+} */
+
+/* ablock */
+.ablock{
+    margin-top: 300px;
+}
+.ablock-nation{
+    padding: 3rem;
+    display: flex;              /*父元素定义内容flex，即子元素全部为flex，父元素本身并不受影响*/
+}
+.wrapper ,.ablock-content{              /*子元素并列要加  ，号 不然会错误*/
+    flex-basis: 50%;
+}
+.wrapper{
+    display: grid;          /*网格布局*/
+    grid-template-columns: repeat(auto-fit , minmax(250px,auto));/*弹性盒子布局*/
+    grid-gap: 2em;
+    padding: 2em;
+}
+.abox{
+    height: 200px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.562);
+    z-index: 996;
+}
+.abox img{ 
+    width: 250px;
+    height:150px;
+    transition: transform 0.5s ease-in-out;
+    /* margin-bottom: 20px; */
+    
+} 
+.ablock-content{
+    margin-left: 50px;
+   
+}
+.ablock-content-box{
+    background: rgba(193, 130, 151, 0.647);
+    padding: 15px;
+    border-radius: 20px;
+  
+}
+.ablock-content h1{
+    margin-bottom: 30px;
+}
+.ablock-content p{
+    margin-bottom: 30px;
+}
+.ablock-img{
+    
+   position: absolute;
+}
+.ablock-img img{
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    /* opacity: 0.8; */
+    animation: ablock-img 6s ease-in-out infinite;  /*动画*/
+}
+@keyframes ablock-img{
+    0%{ 
+        transform: scale(1);
+        transform: translateX(0px);
+    }
+    50%{
+        transform: scale(1.2);
+        transform: translateX(400px);
+    }
+    100%{
+        transform: scale(1);
+        transform: translate(0px)
+    }
+}
+.abox{
+    transition: transform 0.5s ease-in-out;
+}
+.abox:hover{
+    transform: scale(1.5);/*这个没用是因为容器放大1.2倍，容器是看不见的*/
+    transform: translateY(-20px);
+}
+.abox img:hover{
+    transform: scale(1.1);
+}
+
+
+/* bblock */
+.bblock{
+    margin-top: 300px;
+}
+.bblock h1{
+    color: #4542ff;
+    margin-bottom: 30px;
+    margin: 50px;
+}
+.bblock p{
+    padding-left: 50px;
+    padding-right: 50%;
+}
+.bblock-content{
+    display: flex;
+}
+.bblock-img{
+    padding-top: 30px;
+    flex-basis: 50%;
+    /* border: solid 2px beige; */
+}
+.bblock-img img{
+    max-width: 100%;
+   max-height: 100%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.301);
+    border-radius: 10px;
+}
+
+
+/* cblock */
+.cblock{
+    margin-top: 300px;
+    text-align: center;
+}
+.cblock h1{
+   /* text-align: center; */
+   color:orange;
+}
+.cblock-imgs{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px , auto));
+}
+.cbox{
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.cbox img{
+    max-height: 100%;
+    min-width: 100%;
+}
+
+.details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;             /*11111Z这里多看看*/
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 255, 0.116);
+    transform: scalex(0);               /*设置画面x轴为0*/
+    transition: transform 0.5s ease;
+}
+.cbox:hover .details{
+    transform: scaleX(1);
+}
+.details h1,h2{
+    color: whitesmoke;
+}
+
+/* dblock */
+.dblock{
+    margin-top: 200px;
+}
+
+.dblock-h1{
+   
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.dblock-img{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px,auto));
+    grid-gap: 2em;
+    padding: 2em;
+}
+.dbox{
+    background: white;
+    height: 400px;
+    border-radius: 5px;
+    display: flex;                     /*弹性布局，方向竖直向下,等分布局*/
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: transform 1s ease;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.562);
+}
+.dbox img{
+    width: 120px;
+    border-radius: 50%;
+}
+.dbox h2{
+    color: black;
+}
+.dboxtb i{
+    margin: 0 20px;
+    transition: transform 0.5s ease;
+}
+.dboxtb i:hover{
+   color: #4542ff;
+   transform: scale(1.5);
+}
+
+/* eblock */
+.eblock{
+    margin-top: 300px;
+}
+.eblock-h1{
+    padding-bottom: 30px;
+    margin-left: 50px;
+}
+.eblock-p{
+    margin: 50px;
+    padding-right: 50%;
+}
+.eblock-img{
+    margin: 10px 30px;
+     
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(200px,auto));/*别说了，又是网格布局*/
+}
+.ebox{
+    /* border: solid 2px; */
+    min-height: 300px;
+    /* text-align: center; */
+    margin: 0 30px;
+    background: rgba(232, 85, 125, 0.404);
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.562);
+}
+.ebox i{
+    margin: 10px;
+    color: rgba(245, 245, 245, 0.538)   ;
+    font-size: 20px;
+}
+.ebox-ih{
+    margin-left: 30px;
+    display: flex;
+    align-items: baseline;  /*文本对块的对齐情况*/
+}
+.ebox-ih img{
+    border-radius: 50%;
+}
+.ebox p{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+/* fblock */
+.fblock{
+    margin-top: 200px;
+}
+.fblock-h1{
+    margin-left: 50px;
+    color: rgb(163, 3, 54);
+    text-align: center;
+}
+.fbox{
+    min-height: 500px;
+    /* text-align: center; */
+    background: #c4937a80;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.562);
+}
+.fbox img{
+    /* width: 400px; */
+    width: 100%;/*铺满父亲宽度*/
+    
+}
+.fbox h1{
+    text-align: center;
+}
+
+/* gblock */
+
+.gblock{
+    margin-top: 80px;
+    padding: 10rem;
+}
+.gbox{
+    display: flex;
+    width: 80%;
+    padding: 2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.116);
+    margin: 10px auto;
+    justify-content: space-around;
+    border-radius: 10px;
+    background: #b621006a;
+
+}
+.ctn button{
+    padding: 20px 50px;
+    color: white;
+    background: var(--gradient-3);
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 255, 0.171);
+    cursor: pointer;
+    outline: none;
+}
+
+
+/* hblock */
+.hblock{
+    margin-top: 160px;
+    background: rgba(248, 201, 201, 0.933);
+}
+.hbox{
+    padding: 0 50px;
+}
+.hbox h1{
+    color:#282f59;
+    margin-bottom: 20px;
+}
+.hbox p{
+    margin-top: 20px;
+    color: gray;
+}
+.hboxtb {
+    margin-top: 100px;
+    text-align: center;
+}
+.hboxtb i{
+    margin: 0 30px;
+    font-size: 30px;
+}
+.hblock-b{
+    display: flex;
+    justify-content: space-around;/*这样能让模块自动居中布局*/
+    color: rgb(60, 56, 56);
+    padding: 30px;
+    font-weight: 400;
+}
+.hblock-b h4{
+    color: grey;
+}
+
+.hblock hr{
+    width: 90%;
+    margin: 0 auto;
+    padding: 1px;
+    color:black ;
+    background: black;
+}
+/* 回到顶部 */
+.gotop{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  
+}
+.gotop img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+
+/* 夜间模式切换 */
+/* 先制作按钮 */
+/* .theme{
+    position: absolute;
+    top: 30px;
+    left: 30%;
+}
+
+.label{
+    width: 50px;
+    height: 20px;
+    background: rgb(219, 218, 218);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.label .ball{
+    width: 15px;
+    height: 15px;
+    background: #282f59;
+    border-radius: 50%;
+    margin: 5px;
+    transition: transform 0.5s;
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox:checked ~ .label{
+    background: #282f59;
+}
+
+.checkbox:checked ~ .label .ball{
+    background-color: whitesmoke;
+    transform: translateX(25px);
+} */ 
+
+/* Dark mode colors  原来的*/
+/* body.dark{
+    background: #282f59;
+}
+
+body.dark p{
+    color: #cbcdda;
+}
+
+body.dark h1{
+    color: whitesmoke;
+}
+
+body.dark .team h1{
+    color: #282f59;
+}
+
+body.dark .footer h4{
+    color: #cbcdda;
+}
+
+body.dark .copyright{
+    color: #cbcdda;
+}
+
+
+body.dark a{
+    color: whitesmoke;
+}
+
+body.dark .team .team-h1{
+    color: whitesmoke;
+}
+
+
+
+/* 按钮制作 */
+.mytheme{
+    position: absolute;
+    top: 30px;
+    left: 30%;
+}
+.mylabel{
+    width: 50px;
+    height: 20px;
+    background: white;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    cursor: pointer;         /*改变鼠标样式*/
+    
+}
+.mylabel .myball{
+    width: 15px;
+    height: 15px;
+    background: #282f59;
+    border-radius: 50%;
+    margin: 5px;
+    transition: transform 0.5s ;
+}
+.mycheckbox{
+    opacity:0 ;
+    position: absolute;
+}
+/* 到这按钮格式制造完成,不过是静态的 ,接下来是动态*/
+.mycheckbox:checked ~ .mylabel{
+    background: #282f59;
+}
+.mycheckbox:checked ~ .mylabel .myball{
+    background-color: whitesmoke;
+    transform: translateX(25px);
+}
+
+/* 我的深色模式 */
+body.dark{
+   background-image: url('./img/bg2.jpg');
+}
+body.dark p{
+    color: rgb(203, 0, 125);
+}
+body.dark h1{
+    color: red;
+}
+
+
+.music{
+    position: absolute;
+    margin-left: 500px;
+    
+}
+#musicbtn{
+    opacity: 0.9;
+
+}
